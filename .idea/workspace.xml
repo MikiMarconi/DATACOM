@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="135254bc-d167-4040-a8fe-6d3d2fc000d7" name="Changes" comment="" />
+    <list default="true" id="135254bc-d167-4040-a8fe-6d3d2fc000d7" name="Changes" comment="Impostazione ip da telnet">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prova.py" beforeDir="false" afterPath="$PROJECT_DIR$/prova.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,8 +45,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695632315507</updated>
-      <workItem from="1695632317627" duration="9554000" />
+      <workItem from="1695632317627" duration="14666000" />
     </task>
+    <task id="LOCAL-00001" summary="Impostazione ip da telnet">
+      <created>1695648652212</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695648652212</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -59,8 +71,12 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Impostazione ip da telnet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Impostazione ip da telnet" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DATACOM$Interface.coverage" NAME="Interface Coverage Results" MODIFIED="1695648288128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DATACOM$prova.coverage" NAME="prova Coverage Results" MODIFIED="1695648348005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DATACOM$prova.coverage" NAME="prova Coverage Results" MODIFIED="1695655815890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

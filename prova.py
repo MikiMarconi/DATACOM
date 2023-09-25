@@ -50,7 +50,7 @@ def accesso(Router):
     assegnaIp(Router, tn)
 
 def assegnaIp(Router, tn):
-    tn.write((b"interface "+str(Router.interfaccia.tipo).encode('ascii') + b" 0/0/"+ str(Router.numerodiporte).encode('ascii')) + b"\n")
+    tn.write((b"interface GigabitEthernet 0/0/"+ str(Router.numerodiporte).encode('ascii')) + b"\n")
     wait(tn)
     tn.write((b"ip address " + Router.interfaccia.ip.encode('ascii')) + b"\n")
     wait(tn)
@@ -60,48 +60,25 @@ def wait(tn):
     tn.read_until(b'[R2').decode('ascii')
 
 def start():
-    # Convalida il tipo di interfaccia
     while True:
-        tipo_interfaccia = input("Inserisci il tipo di interfaccia (Ethernet o GigabitEthernet): ")
-        if tipo_interfaccia in ["Ethernet", "GigabitEthernet"]:
-            convalidaNumeroInterfaccia(tipo_interfaccia)
+        numerodiporte = int(input("Inserisci il numero della porta a cui vuoi assegnare l'ip (da 0 a 1): "))
+        if 0 <= numerodiporte <= 1:
+            convalidaIP( numerodiporte)
             break
         else:
-            print("Tipo di interfaccia non valido. Riprova.")
+            print("Numero di porte non valido per GigabitEthernet. Riprova.")
 
-def convalidaNumeroInterfaccia(tipo_interfaccia):
-    if tipo_interfaccia == "Ethernet":
-        while True:
-            numerodiporte = int(input("Inserisci il numero di porte (da 0 a 7): "))
-            if 0 <= numerodiporte <= 7:
-                convalidaIP(tipo_interfaccia, numerodiporte)
-                break
-            else:
-                print("Numero di porte non valido per Ethernet. Riprova.")
-    else:  # tipo_interfaccia == "GigabitEthernet"
-        while True:
-            numerodiporte = int(input("Inserisci il numero di porte (da 0 a 1): "))
-            if 0 <= numerodiporte <= 1:
-                convalidaIP(tipo_interfaccia, numerodiporte)
-                break
-            else:
-                print("Numero di porte non valido per GigabitEthernet. Riprova.")
-
-def convalidaIP(tipo_interfaccia, numerodiporte):
+def convalidaIP(numerodiporte):
     router1 = Router(None, None)
-    interfaccia1 = Interfaccia(None, None)
+    interfaccia1 = Interfaccia(None)
     while True:
-        ip_interfaccia = input(f"Inserisci l'indirizzo IP dell'interfaccia (valore.valore.valore.valore maschera) per {tipo_interfaccia}: ")
+        ip_interfaccia = input(f"Inserisci l'indirizzo IP dell'interfaccia (valore.valore.valore.valore maschera) per l'interfaccia GigabitEthernet: ")
 
         if is_valid_ip_format(ip_interfaccia) and is_valid_ip(ip_interfaccia):
-
-            # print(interfaccia1.setInterface(tipo_interfaccia, ip_interfaccia).ip + " "+ interfaccia1.setInterface(tipo_interfaccia, ip_interfaccia).tipo)
-            accesso(router1.setRouter(numerodiporte, interfaccia1.setInterface(tipo_interfaccia, ip_interfaccia)))
+            accesso(router1.setRouter(numerodiporte, interfaccia1.setInterface(ip_interfaccia)))
             break
         else:
             print("Indirizzo IP non valido. Riprova.")
-
-
 
 if __name__ == '__main__':
     # starta lo script
