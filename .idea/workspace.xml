@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="135254bc-d167-4040-a8fe-6d3d2fc000d7" name="Changes" comment="starting ssh library">
-      <change beforePath="$PROJECT_DIR$/.idea/DATACOM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DATACOM.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="135254bc-d167-4040-a8fe-6d3d2fc000d7" name="Changes" comment="prova">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConnectionSSH.py" beforeDir="false" afterPath="$PROJECT_DIR$/ConnectionSSH.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/InterfaceObj.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,18 +31,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Michelangelo/DATACOM&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Michelangelo/Farmacia/GestioneFarmacia/Gui/GestioneLogin/menu.py",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Michelangelo\DATACOM\esempio di prova" />
@@ -85,6 +83,15 @@
       <updated>1695632315507</updated>
       <workItem from="1695632317627" duration="17193000" />
       <workItem from="1696407362052" duration="5102000" />
+      <workItem from="1696495658198" duration="7742000" />
+      <workItem from="1696514485586" duration="29000" />
+      <workItem from="1696514540444" duration="82000" />
+      <workItem from="1696514695926" duration="470000" />
+      <workItem from="1696515626645" duration="36000" />
+      <workItem from="1696515989054" duration="70000" />
+      <workItem from="1696516134785" duration="37000" />
+      <workItem from="1696516223370" duration="3179000" />
+      <workItem from="1696522016458" duration="13003000" />
     </task>
     <task id="LOCAL-00001" summary="Impostazione ip da telnet">
       <created>1695648652212</created>
@@ -107,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696408073484</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="prova">
+      <created>1696419040803</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696419040803</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,11 +142,16 @@
     <MESSAGE value="Impostazione ip da telnet" />
     <MESSAGE value="modifiche eliminazione porta Ethernet" />
     <MESSAGE value="starting ssh library" />
-    <option name="LAST_COMMIT_MESSAGE" value="starting ssh library" />
+    <MESSAGE value="prova" />
+    <option name="LAST_COMMIT_MESSAGE" value="prova" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DATACOM$Manage.coverage" NAME="Manage Coverage Results" MODIFIED="1696591280068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DATACOM$StartUi.coverage" NAME="StartUi Coverage Results" MODIFIED="1696524212432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DATACOM$Interface.coverage" NAME="Interface Coverage Results" MODIFIED="1695648288128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DATACOM$MainApp.coverage" NAME="MainApp Coverage Results" MODIFIED="1696502663381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DATACOM$prova.coverage" NAME="prova Coverage Results" MODIFIED="1695655925013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DATACOM$ConnectionSSH.coverage" NAME="ConnectionSSH Coverage Results" MODIFIED="1696418943253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DATACOM$ConnectionSSH.coverage" NAME="ConnectionSSH Coverage Results" MODIFIED="1696522019972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DATACOM$main.coverage" NAME="main Coverage Results" MODIFIED="1696593346921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
