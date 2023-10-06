@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="backimm">
+    <file>manageport.PNG</file>
+    <file>R5imm.PNG</file>
+    <file>R6imm.PNG</file>
+  </qresource>
+</RCC>
