@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="135254bc-d167-4040-a8fe-6d3d2fc000d7" name="Changes" comment="prova">
+    <list default="true" id="135254bc-d167-4040-a8fe-6d3d2fc000d7" name="Changes" comment="interfaccia grafica e popolamento tabella">
+      <change afterPath="$PROJECT_DIR$/esempio di prova/porva snmp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConnectionSSH.py" beforeDir="false" afterPath="$PROJECT_DIR$/ConnectionSSH.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Manage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,19 +32,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Michelangelo/Farmacia/GestioneFarmacia/Gui/GestioneLogin/menu.py",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Michelangelo/DATACOM&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Michelangelo\DATACOM\esempio di prova" />
@@ -91,7 +92,10 @@
       <workItem from="1696515989054" duration="70000" />
       <workItem from="1696516134785" duration="37000" />
       <workItem from="1696516223370" duration="3179000" />
-      <workItem from="1696522016458" duration="13003000" />
+      <workItem from="1696522016458" duration="13115000" />
+      <workItem from="1696839168812" duration="1292000" />
+      <workItem from="1696841901483" duration="1663000" />
+      <workItem from="1696925734453" duration="630000" />
     </task>
     <task id="LOCAL-00001" summary="Impostazione ip da telnet">
       <created>1695648652212</created>
@@ -121,7 +125,21 @@
       <option name="project" value="LOCAL" />
       <updated>1696419040803</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="interfaccia grafica e popolamento tabella">
+      <created>1696593435758</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696593435758</updated>
+    </task>
+    <task id="LOCAL-00006" summary="interfaccia grafica e popolamento tabella">
+      <created>1696593446922</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696593446922</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +161,8 @@
     <MESSAGE value="modifiche eliminazione porta Ethernet" />
     <MESSAGE value="starting ssh library" />
     <MESSAGE value="prova" />
-    <option name="LAST_COMMIT_MESSAGE" value="prova" />
+    <MESSAGE value="interfaccia grafica e popolamento tabella" />
+    <option name="LAST_COMMIT_MESSAGE" value="interfaccia grafica e popolamento tabella" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DATACOM$Manage.coverage" NAME="Manage Coverage Results" MODIFIED="1696591280068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -152,6 +171,7 @@
     <SUITE FILE_PATH="coverage/DATACOM$MainApp.coverage" NAME="MainApp Coverage Results" MODIFIED="1696502663381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DATACOM$prova.coverage" NAME="prova Coverage Results" MODIFIED="1695655925013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DATACOM$ConnectionSSH.coverage" NAME="ConnectionSSH Coverage Results" MODIFIED="1696522019972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DATACOM$main.coverage" NAME="main Coverage Results" MODIFIED="1696593346921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DATACOM$main.coverage" NAME="main Coverage Results" MODIFIED="1696925757775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DATACOM$porva_snmp.coverage" NAME="porva snmp Coverage Results" MODIFIED="1696843933703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/esempio di prova" />
   </component>
 </project>

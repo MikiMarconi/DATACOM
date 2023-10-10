@@ -177,7 +177,7 @@ class Ui_Manage(object):
 
         self.viewintbtn.clicked.connect(self.openViewInterface)
         self.pushButton_2.clicked.connect(self.openRouterChoice)
-
+        self.viewintbtn.clicked.connect(self.openViewInterface)
 
 
         self.retranslateUi(Form, sysname)
@@ -219,6 +219,7 @@ class Ui_Manage(object):
         self.ui.setupUi(self.back)
         self.back.show()
         self.form2.close()
+
 
     def getInterfaceInfo(self, sysname):
         if sysname == "R6":
