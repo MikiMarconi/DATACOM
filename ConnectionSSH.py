@@ -3,7 +3,7 @@ from InterfaceObj import Interface  # Assicurati di importare la classe Interfac
 
 class Connection:
     @staticmethod
-    def splitOutput(host, port, username, password, device_type, port1, port2):
+    def splitOutput(host, port, username, password, device_type):
         try:
             connection = ConnectHandler(host=host, port=port, username=username, password=password,
                                         device_type=device_type)
@@ -15,8 +15,7 @@ class Connection:
             # Itera attraverso le righe per cercare le interfacce desiderate
             for linea in linee:
                 colonne = linea.split()
-                if len(colonne) >= 1 and colonne[0] in ["GigabitEthernet0/0/0." + port1,
-                                                        "GigabitEthernet0/0/0." + port2]:
+                if len(colonne) >= 1 and colonne[0] in ["GigabitEthernet0/0/0","GigabitEthernet0/0/1"]:
                     interfaccia = colonne[0]
                     phy = colonne[1]
                     protocol = colonne[2]

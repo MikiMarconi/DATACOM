@@ -221,27 +221,22 @@ class Ui_Manage(object):
         self.form2.close()
 
 
+
     def getInterfaceInfo(self, sysname):
+
+        port = "22"  # Sostituisci con la porta corretta
+        username = "admin"  # Sostituisci con l'username corretto
+        password = "huawei123"  # Sostituisci con la password corretta
+        device_type = "huawei_vrp"  # Sostituisci con il tipo di dispositivo corretto
+
         if sysname == "R6":
             host = "10.100.0.10"  # Sostituisci con l'indirizzo IP corretto
-            port = "22"  # Sostituisci con la porta corretta
-            username = "admin"  # Sostituisci con l'username corretto
-            password = "huawei123"  # Sostituisci con la password corretta
-            device_type = "huawei_vrp"  # Sostituisci con il tipo di dispositivo corretto
-            port1 = "16"  # Sostituisci con il valore corretto
-            port2 = "36"  # Sostituisci con il valore corretto
 
         else:
             host = "10.100.0.9"  # Sostituisci con l'indirizzo IP corretto
-            port = "22"  # Sostituisci con la porta corretta
-            username = "admin"  # Sostituisci con l'username corretto
-            password = "huawei123"  # Sostituisci con la password corretta
-            device_type = "huawei_vrp"  # Sostituisci con il tipo di dispositivo corretto
-            port1 = "51"  # Sostituisci con il valore corretto
-            port2 = "52"  # Sostituisci con il valore corretto
 
         connection_instance = Connection()
-        interfaces = connection_instance.splitOutput(host, port, username, password, device_type, port1, port2)
+        interfaces = connection_instance.splitOutput(host, port, username, password, device_type)
         return interfaces
 
     def populateTable(self, interfaces, sysname):
@@ -270,5 +265,4 @@ class Ui_Manage(object):
         update_thread = threading.Thread(target=updateTable)
         update_thread.daemon = True  # Imposta il thread come daemon per terminarlo quando si chiude l'applicazione
         update_thread.start()
-
 
