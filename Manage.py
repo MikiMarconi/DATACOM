@@ -173,12 +173,10 @@ class Ui_Manage(object):
         self.viewintbtn.setIconSize(QtCore.QSize(45, 45))
         self.viewintbtn.setObjectName("viewintbtn")
         self.populateTable(self.getInterfaceInfo(sysname), sysname)
+        self.start_switch_traffic_thread(sysname)
 
-
-        self.viewintbtn.clicked.connect(self.openViewInterface)
         self.pushButton_2.clicked.connect(self.openRouterChoice)
-        self.viewintbtn.clicked.connect(self.openViewInterface)
-
+        self.viewintbtn.clicked.connect(lambda: self.openViewInterface(sysname))  # Sostituisci "R5" con il valore desiderato per sysname
 
         self.retranslateUi(Form, sysname)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -204,13 +202,12 @@ class Ui_Manage(object):
         self.label.setText(f"{sysname} MANAGEMENT")
         self.viewintbtn.setText(_translate("Form", " View Interfaces"))
 
-    def openViewInterface(self, event):
-        from ViewInt import Ui_ViewInt
+    def openViewInterface(self, sysname):
+        from ViewInt import Ui_Form
         self.viewint = QtWidgets.QFrame()
-        self.ui = Ui_ViewInt()
-        self.ui.setupUi(self.viewint)
+        self.ui = Ui_Form()
+        self.ui.setupUi(self.viewint, sysname)
         self.viewint.show()
-
 
     def openRouterChoice(self, event):
         from StartUi import Ui_MainWindow
@@ -220,7 +217,14 @@ class Ui_Manage(object):
         self.back.show()
         self.form2.close()
 
+    def start_switch_traffic_thread(self, sysname):
+        def switch_traffic_wrapper():
+            while True:
+                self.switchTraffic(sysname)
 
+        switch_thread = threading.Thread(target=switch_traffic_wrapper)
+        switch_thread.daemon = True  # Imposta il thread come daemon per terminarlo quando si chiude l'applicazione
+        switch_thread.start()
 
     def getInterfaceInfo(self, sysname):
 
