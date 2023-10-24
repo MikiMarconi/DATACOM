@@ -94,40 +94,68 @@ class Connection:
 
     @staticmethod
     def switchTraffic(sysname):
-        if sysname == "R5":
-            host = "10.100.0.9"
-        elif sysname == "R6":
-            host = "10.100.0.10"
-        else:
-            print("Sysname non riconosciuto")
-            return
-
         while True:
-            # Ottieni le informazioni sull'interfaccia desiderata
-            interfaces = Connection.splitOutput(host, "22", "admin", "huawei123", "huawei_vrp")
+            host = "10.100.0.9"
+            host2 = "10.100.0.10"
 
-            # Controlla le interfacce
-            for interface in interfaces:
-                inUti_percentage = float(interface.InUti.strip('%'))
-                if inUti_percentage > 30:
-                    # La percentuale di utilizzo supera la soglia, esegui i comandi
-                    try:
-                        connection = ConnectHandler(host=host, port="22", username="admin", password="huawei123", device_type="huawei_vrp")
-                        connection.send_config_set("interface 0/0/0")
-                        connection.send_config_set("ospf dr-priority 20")
-                        connection.disconnect()
+            # Effettua la connessione ai dispositivi e raccogli i dati
+            interfacesR5 = Connection.splitOutput(host, "22", "admin", "huawei123", "huawei_vrp")
+            inpercR5 = float(interfacesR5[0].InUti.strip('%'))
+            outUti_percentageR5 = float(interfacesR5[0].OutUti.strip('%'))
+            print(outUti_percentageR5)
+            print(inpercR5)
 
-                        # Attendere 30 secondi
-                        time.sleep(30)
+            interfacesR6 = Connection.splitOutput(host2, "22", "admin", "huawei123", "huawei_vrp")
+            inpercR6 = float(interfacesR6[0].InUti.strip('%'))
+            outUti_percentageR6 = float(interfacesR6[0].OutUti.strip('%'))
+            print(outUti_percentageR6)
+            print(inpercR6)
 
-                        # Risetta la priorità a 10
-                        connection = ConnectHandler(host=host, port="22", username="admin", password="huawei123", device_type="huawei_vrp")
-                        connection.send_config_set("interface 0/0/0")
-                        connection.send_config_set("ospf dr-priority 10")
-                        connection.disconnect()
+            # Effettua la connessione SSH e imposta le rotte statiche
+            connection = ConnectHandler(host=host, port="22", username="admin", password="huawei123",
+                                        device_type="huawei_vrp")
+            connection.send_command("system-view")
+            connection.send_command("ip route-static 192.168.20.190 31 192.168.52.2 preference 5")
+            connection.disconnect()
 
-                    except Exception as e:
-                        print(f"Errore nell'esecuzione dei comandi su {interface.interface}: {str(e)}")
+            # Introduci un ritardo prima di gestire l'altro dispositivo
+            time.sleep(30)  # Attendere 30 secondi
+
+            connection = ConnectHandler(host=host2, port="22", username="admin", password="huawei123",
+                                        device_type="huawei_vrp")
+            connection.send_command("system-view")
+            connection.send_command("ip route-static 192.168.10.190 31 192.168.36.3 preference 5")
+            connection.disconnect()
 
             # Attendere un po' di tempo prima di controllare nuovamente
-            time.sleep(60)  # Controlla ogni 60 secondi (puoi regolare il valore in base alle tue esigenze)
+            time.sleep(10)  # Controlla ogni 10 secondi (puoi regolare il valore in base alle tue esigenze)
+
+        # if outUti_percentageR5 or inpercR5 or inpercR6 or outUti_percentageR6 > 9.85:
+        #     # La percentuale di utilizzo supera la soglia, esegui i comandi
+        #     try:
+        #         connection = ConnectHandler(host=host, port="22", username="admin", password="huawei123",
+        #                                     device_type="huawei_vrp")
+        #         connection.send_command("ip route-static 192.168.20.190 31 192.168.52.2 preference 5")
+        #
+        #         connection.disconnect()
+        #
+        #         connection = ConnectHandler(host=host2, port="22", username="admin", password="huawei123",
+        #                                     device_type="huawei_vrp")
+        #         connection.send_command("ip route-static 192.168.10.190 31 192.168.36.3 preference 5")
+        #
+        #         connection.disconnect()
+        #
+                # Attendere 30 secondi
+                # time.sleep(90)
+                #
+                # # Risetta la priorità a 10
+                # connection = ConnectHandler(host=host, port="22", username="admin", password="huawei123",
+                #                                 device_type="huawei_vrp")
+                # connection.send_command("undo ip route-static 192.168.10.190 31 192.168.36.3 preference 5")
+                # connection.send_command("undo ip route-static 192.168.20.190 31 192.168.52.2 preference 5")
+                # connection.disconnect()
+            # except Exception as e:
+            #     print(f"Errore nell'esecuzione dei comandi sull'interfaccia: {str(e)}")
+
+        # Attendere un po' di tempo prima di controllare nuovamente
+        # time.sleep(10)  # Controlla ogni 5 secondi (puoi regolare il valore in base alle tue esigenze)

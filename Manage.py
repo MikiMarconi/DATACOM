@@ -220,7 +220,8 @@ class Ui_Manage(object):
     def start_switch_traffic_thread(self, sysname):
         def switch_traffic_wrapper():
             while True:
-                self.switchTraffic(sysname)
+                connection = Connection()
+                connection.switchTraffic(sysname)
 
         switch_thread = threading.Thread(target=switch_traffic_wrapper)
         switch_thread.daemon = True  # Imposta il thread come daemon per terminarlo quando si chiude l'applicazione
