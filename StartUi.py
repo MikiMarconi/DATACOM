@@ -59,7 +59,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "CHOICE OPTIMIZE"))
+        self.label.setText(_translate("MainWindow", "OPTIMIZE"))
 
     def openmanagement(self, event, sysname):
         from Manage import Ui_Manage

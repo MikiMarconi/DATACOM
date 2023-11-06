@@ -102,6 +102,12 @@
       <workItem from="1697634507223" duration="19168000" />
       <workItem from="1698051434506" duration="9007000" />
       <workItem from="1698137308980" duration="7229000" />
+      <workItem from="1698164404001" duration="510000" />
+      <workItem from="1698222968416" duration="6275000" />
+      <workItem from="1698229688370" duration="453000" />
+      <workItem from="1698230262684" duration="529000" />
+      <workItem from="1698230909061" duration="1403000" />
+      <workItem from="1698232554530" duration="483000" />
     </task>
     <task id="LOCAL-00001" summary="Impostazione ip da telnet">
       <created>1695648652212</created>
@@ -159,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697531493312</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="modifiche generale">
+      <created>1698164429548</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1698164429548</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +212,7 @@
     <SUITE FILE_PATH="coverage/DATACOM$MainApp.coverage" NAME="MainApp Coverage Results" MODIFIED="1696502663381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DATACOM$prova.coverage" NAME="prova Coverage Results" MODIFIED="1695655925013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DATACOM$ConnectionSSH.coverage" NAME="ConnectionSSH Coverage Results" MODIFIED="1698142477582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DATACOM$main.coverage" NAME="main Coverage Results" MODIFIED="1698144598269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DATACOM$main.coverage" NAME="main Coverage Results" MODIFIED="1698232978781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DATACOM$porva_snmp.coverage" NAME="porva snmp Coverage Results" MODIFIED="1696843933703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/esempio di prova" />
   </component>
 </project>

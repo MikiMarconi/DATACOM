@@ -173,7 +173,7 @@ class Ui_Manage(object):
         self.viewintbtn.setIconSize(QtCore.QSize(45, 45))
         self.viewintbtn.setObjectName("viewintbtn")
         self.populateTable(self.getInterfaceInfo(sysname), sysname)
-        self.start_switch_traffic_thread(sysname)
+        self.start_switch_traffic_thread()
 
         self.pushButton_2.clicked.connect(self.openRouterChoice)
         self.viewintbtn.clicked.connect(lambda: self.openViewInterface(sysname))  # Sostituisci "R5" con il valore desiderato per sysname
@@ -217,11 +217,11 @@ class Ui_Manage(object):
         self.back.show()
         self.form2.close()
 
-    def start_switch_traffic_thread(self, sysname):
+    def start_switch_traffic_thread(self):
         def switch_traffic_wrapper():
             while True:
                 connection = Connection()
-                connection.switchTraffic(sysname)
+                connection.switchTraffic()
 
         switch_thread = threading.Thread(target=switch_traffic_wrapper)
         switch_thread.daemon = True  # Imposta il thread come daemon per terminarlo quando si chiude l'applicazione
